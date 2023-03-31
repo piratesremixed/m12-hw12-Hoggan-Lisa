@@ -5,7 +5,18 @@
   --highlight: rgba(251, 255, 38, 0.493);
 }
 
+/*===============================
+BODY
+=================================
+*/
 body {
+  display: grid;
+  grid-template-areas: 
+  "header   header                 header                  header                  header"
+  "nav      nav    img_card__container     img_card__container     img_card__container"
+  "footer   footer                 footer   footer                  footer";
+  grid-template-columns: 0.3fr 1fr 0.3fr 0.3fr 0.3fr;
+  grid-template-rows: 100px 300px 1fr 60px;
   font-family: 'Indie Flower', cursive;
   font-size: 1.2rem;
   margin: 0;
@@ -13,7 +24,11 @@ body {
   min-height: 100vh;
 }
 
+
+
 .header {
+  display: grid;
+  grid-area: header;
   background-color: var(--primary);
   color: var(--white);
   display: grid;
@@ -27,11 +42,15 @@ body {
   font-family: 'Pacifico', cursive;
 }
 
+/*===============================
+NAV
+=================================
+*/
+
 .nav__container {
   box-shadow: var(--gray) 4px 4px 10px 2px;
-  display: grid;
+  grid-area: nav;
   row-gap: 24px;
-  grid-template-columns: 1fr;
   min-width: 200px;
   justify-items: center;
   padding: 12px 0 24px;
@@ -56,11 +75,24 @@ body {
   box-shadow: inset var(--highlight) 200px 0px 0px 1px;
   padding: 0 70px;
 }
+/*
+==================================
+boxes w/img & lorem text
+==================================
+*/
+.img_card__container{
+  display: grid;
+  grid-area: img_card__container;
+  
+  grid-template-areas: ".img_card__container";
+  grid-gap: 30px;
+}
 
 .img_card {
   width: 300px;
   box-shadow: var(--gray) 4px 4px 10px 2px;
   border-radius: 3px;
+  
 }
 
 .img_card__img {
@@ -72,8 +104,14 @@ body {
   padding: 0 12px;
 }
 
+/*=====================
+FOOTER
+=======================*/
+
 .footer {
   display: grid;
+  grid-area: footer;
+  font-family: sans-serif;
   align-items: center;
   justify-items: center;
 }
@@ -83,6 +121,9 @@ body {
     font-size: 2rem;
   }
   .nav__container {
+    display: grid;
+    float: left;
+
     width: 80vw;
     min-width: 300px;
     grid-template-columns: repeat(4, 1fr);
@@ -97,3 +138,5 @@ body {
     display: none;
   }
 }
+
+/*I'm having a lot of touble figuring out what element I should apply my grid code.*/
