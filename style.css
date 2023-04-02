@@ -148,5 +148,13 @@ The menu, I'm also having an issue with. I've always had a problem with floats a
 I have no idea how to fix this problem.
 
 I don't know how to make 1 column with 4 rows in it. I'm very frustrated...
-Everything I google says 1 row with 4 columns. When I need it the other way around.*/
+Everything I google says 1 row with 4 columns. When I need it the other way around.
+
+NEXT: "You will have to redefine grid-template-area in the provided media
+query to change the grid to a single column with four rows."
+=================but this contradicts this next part============================
+2.	Make the .img_card__container a grid container that auto-fills columns of image cards. 
+o	You will NOT use grid-template-area for this container. Instead, you will set guidelines for CSS grid to use and allow it to auto-create columns and rows.
+I am sooooooooooooooooooooooooooooooooooo confused. use it... but don't use it...
+What does REDEFINE even mean?? I hardly understand what to define, now I have to redefine it...*/
 
