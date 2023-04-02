@@ -12,11 +12,11 @@ BODY
 body {
   display: grid;
   grid-template-areas: 
-  "header   header                 header                  header                  header"
-  "nav      nav    img_card__container     img_card__container     img_card__container"
-  "footer   footer                 footer   footer                  footer";
-  grid-template-columns: 0.3fr 1fr 0.3fr 0.3fr 0.3fr;
-  grid-template-rows: 100px 300px 1fr 60px;
+    "header header"
+    "nav img_card_container"
+    "footer footer";
+  grid-template-columns: 0.3fr 1fr ;
+  grid-template-rows: 100px 300px 1fr;
   font-family: 'Indie Flower', cursive;
   font-size: 1.2rem;
   margin: 0;
@@ -31,7 +31,6 @@ body {
   grid-area: header;
   background-color: var(--primary);
   color: var(--white);
-  display: grid;
   align-items: center;
   justify-items: center;
 }
@@ -46,14 +45,18 @@ body {
 NAV
 =================================
 */
+.nav{
+  display: grid;
+  grid-area: nav;
+}
 
 .nav__container {
   box-shadow: var(--gray) 4px 4px 10px 2px;
-  grid-area: nav;
   row-gap: 24px;
   min-width: 200px;
   justify-items: center;
   padding: 12px 0 24px;
+  
 }
 
 .nav__link, .nav__link--active {
@@ -82,10 +85,9 @@ boxes w/img & lorem text
 */
 .img_card__container{
   display: grid;
-  grid-area: img_card__container;
-  
-  grid-template-areas: ".img_card__container";
   grid-gap: 30px;
+  grid-template-columns: repeat(auto-fill, minmax (300px,1fr));
+  grid-auto-rows: repeat(4, 350px);
 }
 
 .img_card {
@@ -139,4 +141,12 @@ FOOTER
   }
 }
 
-/*I'm having a lot of touble figuring out what element I should apply my grid code.*/
+/*I'm having a lot of touble figuring out what element I should apply my grid code.
+I don't know how to get the footer pushed to the bottom of the screen. 
+I've emailed the prof for guidance and haven't gotten a response yet. Since I'll be busy most of the weekend, I'm not sure what to do.
+The menu, I'm also having an issue with. I've always had a problem with floats and side bars. I don't know how to make my menu look like it does in the example.
+I have no idea how to fix this problem.
+
+I don't know how to make 1 column with 4 rows in it. I'm very frustrated...
+Everything I google says 1 row with 4 columns. When I need it the other way around.*/
+
